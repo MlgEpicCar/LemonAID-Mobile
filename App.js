@@ -6,39 +6,42 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-
-      <Text> What Will You Do?</Text>
-      <SafeAreaView style={styles.button_container}>
-        <Button 
-        title="High Five" 
-        onPress={() => Alert.alert("YAY!")}/>
-
-        <Button 
-        title="STAB!"
-        color="red"
-        onPress={() => Alert.alert("you monster...")}/>
+      <SafeAreaView style={styles.navbar}>
+        <Text style={styles.navbar_text}>Examples</Text>
+        <Text style={styles.navbar_text}>Prices</Text>
+        <TouchableWithoutFeedback>
+          <Image source={{ 
+            width: 50,
+            height: 50,
+            uri: "https://github.com/MlgEpicCar/LemonAID/blob/main/images/LemonLogo.png?raw=true"}}/>
+        </TouchableWithoutFeedback>
+        <Text style={styles.navbar_text}>Team</Text>
+        <Text style={styles.navbar_text}>Account</Text>
 
       </SafeAreaView>
-
-      <TouchableWithoutFeedback>
-        <Image source={{ 
-          width: 350,
-          height: 550,
-          uri: "https://static.wikia.nocookie.net/shipping/images/1/1b/Character_Trailblazer_29_Destruction_Portrait.png/revision/latest?cb=20230716035459"}}/>
-      </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#ffffff', // #fffacd
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 0,
+    backgroundColor: '#fffacd',
   },
 
-  button_container: {
+  navbar: { // Styles for navagation bar
+    backgroundColor: '#fffacd',
     alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    marginBottom: 10,
   },
+
+  navbar_text: {
+    margin: (10, 10, 10, 10),
+  },
+
+  body: {
+    backgroundColor: 'ffffff'
+  }
 });
