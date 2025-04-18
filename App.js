@@ -6,33 +6,6 @@ export default function App() {
 
   return (
     <View>
-      <SafeAreaView style={styles.container}>
-        <SafeAreaView style={styles.navbar}>
-          
-          
-          <View style={styles.navbar_view}>
-            <Text style={styles.navbar_text}>Projects</Text>
-          </View>
-          <View style={styles.navbar_view}>
-            <Text style={styles.navbar_text}>Prices</Text>
-          </View>
-          <TouchableWithoutFeedback style={styles.navbar_view}>
-            <Image source={{ 
-              width: 70,
-              height: 70,
-              uri: "https://github.com/MlgEpicCar/LemonAID/blob/main/images/LemonLogo.png?raw=true"}}/>
-          </TouchableWithoutFeedback>
-          <View style={styles.navbar_view}>
-            <Text style={styles.navbar_text}>Team</Text>
-          </View>
-          <View style={styles.navbar_view}>
-            <Text style={styles.navbar_text}>Account</Text>
-          </View>
-
-        </SafeAreaView>
-      </SafeAreaView>
-
-
       <ScrollView style={body_styles.container}>
         <Text> hello</Text>
         <Text> hello</Text>
@@ -103,14 +76,40 @@ export default function App() {
         <Text> hello</Text>
 
       </ScrollView>
+
+
+      <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.navbar}> 
+          <View style={styles.navbar_view}>
+            <Text style={styles.navbar_text}>Projects</Text>
+          </View>
+          <View style={styles.navbar_view}>
+            <Text style={styles.navbar_text}>Prices</Text>
+          </View>
+          <TouchableWithoutFeedback style={styles.navbar_view}>
+            <Image source={{ 
+              width: 70,
+              height: 70,
+              uri: "https://github.com/MlgEpicCar/LemonAID/blob/main/images/LemonLogo.png?raw=true"}}/>
+          </TouchableWithoutFeedback>
+          <View style={styles.navbar_view}>
+            <Text style={styles.navbar_text}>Team</Text>
+          </View>
+          <View style={styles.navbar_view}>
+            <Text style={styles.navbar_text}>Account</Text>
+          </View>
+
+        </SafeAreaView>
+      </SafeAreaView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
+    // flex: 0,
     backgroundColor: '#ffe761',
+    height: 20,
   },
 
   navbar: { // Styles for navagation bar
@@ -119,6 +118,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     margin: (0, 6),
+    bottom: 40,
+    position: 'absolute',
   },
 
   navbar_text: {
