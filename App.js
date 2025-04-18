@@ -78,7 +78,11 @@ export default function App() {
 
       </ScrollView>
 
-      <SafeAreaView style={styles.container}>
+
+      
+      
+
+      <View style={styles.container}>
         <SafeAreaView style={styles.navbar}>
           <View style={styles.navbar_view}>
             <Text style={styles.navbar_text}>Projects</Text>
@@ -100,8 +104,31 @@ export default function App() {
           </View>
 
         </SafeAreaView>
-      </SafeAreaView>
+      </View>
 
+      <View style={styles.container}>
+        <SafeAreaView style={styles.ghostbar}>
+          <View style={styles.ghostbar}>
+            
+          </View>
+          <View style={styles.ghostbar}>
+            
+          </View>
+          <View style={styles.navbar_image}>
+            <Image source={{ 
+              width: 30,
+              height: 30,
+              uri: "https://github.com/MlgEpicCar/LemonAID/blob/main/images/LemonLogo.png?raw=true"}}/>
+          </View>
+          <View style={styles.ghostbar}>
+            
+          </View>
+          <View style={styles.ghostbar}>
+            
+          </View>
+
+        </SafeAreaView>
+      </View>
 
 
     </View>
@@ -113,7 +140,8 @@ const styles = StyleSheet.create({
     flex: 0,
     // flex: 0,
     backgroundColor: '#ffe761',
-    height: 20,
+    height: 50,
+    paddingTop: 10,
   },
 
   navbar: { // Styles for navagation bar
@@ -121,15 +149,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    margin: (0, 6),
     bottom: 40,
     position: 'absolute',
+    height: 80,
+    width: '100%',
+    zIndex: 1,
   },
 
   navbar_text: {
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
+    zIndex: 1,
   },
 
   navbar_view: {
@@ -141,6 +172,28 @@ const styles = StyleSheet.create({
     margin: 3,
     borderColor: '#e9b424',
     borderWidth: 1,
+    zIndex: 1,
+  },
+
+  navbar_image: {
+    borderRadius: 10000,
+    borderWidth: 50,
+    borderColor: '#ffe761',
+    borderStyle: 'solid',
+    zIndex: 0,
+  },
+
+  ghostbar: {
+    flex: 1,
+    zIndex: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    bottom: 70,
+    position: 'absolute',
+    height: 80,
+    width: '100%',
+    zIndex: 0,
   },
 });
 
