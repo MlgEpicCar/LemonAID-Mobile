@@ -1,18 +1,10 @@
-import * as React from 'react';
-import MainContainer from './navagation/MainContainer';
-
-<<<<<<< HEAD
-function App() {
-  return(
-    <MainContainer/>
-  )
-}
-
-export default App;
-=======
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, TouchableWithoutFeedback, Image, SafeAreaView, Button, Alert, ScrollView } from 'react-native';
+ 
 export default function App() {
   console.log("all good aha~"); // DELETE THIS WHEN DONE
 
+  
   return (
     <View>
       <SafeAreaView style={styles.container}>
@@ -154,4 +146,3 @@ const body_styles = StyleSheet.create({
     backgroundColor: '#fffacd',
   },
 });
->>>>>>> parent of a1fde58 (V0.3.1 (scratch nav bar))
