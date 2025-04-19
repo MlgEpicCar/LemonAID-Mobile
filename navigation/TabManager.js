@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Image, StyleSheet} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import ProjectsScreen from '../screens/ProjectsScreen';
 import PricesScreen from '../screens/PricesScreen';
@@ -8,12 +11,16 @@ import HomeScreen from '../screens/HomeScreen';
 import TeamScreen from '../screens/TeamScreen';
 import AccountScreen from '../screens/AccountScreen';
 
+import SignInScreen from '../screens/SignInScreen';
+
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const TabManager = () => {
     return (
         
         <Tab.Navigator
+            initialRouteName="Home" // this makes the home page come first!
             screenOptions={{
                 tabBarStyle: {
                     borderTopColor: '#ffe761',
@@ -113,4 +120,22 @@ const TabManager = () => {
     );
 }
 
-export default TabManager;
+const AppNavigator = () => {
+    const [isSignedIn, setIsSignedIn] = useState(false); // Replace with actual auth logic
+
+    return (
+        
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        {!isSignedIn ? (
+          <Stack.Screen name="SignIn">
+            {() => <SignInScreen onSignIn={() => setIsSignedIn(true)} />}
+          </Stack.Screen>
+        ) : (
+          <Stack.Screen name="Main" component={TabManager} />
+        )}
+      </Stack.Navigator>
+        
+    );
+};
+
+export default AppNavigator;
