@@ -18,7 +18,7 @@ const TabManager = () => {
     return (
         
         <Tab.Navigator
-            initialRouteName="Home" // this makes the home page come first!
+            initialRouteName="Schedule" // this makes the home page come first!
             screenOptions={{
                 tabBarStyle: {
                     borderTopColor: '#ffe761',
@@ -70,7 +70,7 @@ const TabManager = () => {
                         </View>
                     ),
             }} />
-            <Tab.Screen name="Home" component={HomeScreen} options= {{
+            <Tab.Screen name="Schedule" component={HomeScreen} options= {{
                     tabBarIcon: ({focused}) => (
                         <View>
                             <Image
