@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { View, Image, StyleSheet} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import ProjectsScreen from '../screens/ProjectsScreen';
@@ -35,7 +33,8 @@ const TabManager = () => {
                     color: '#e9b424',
                     fontWeight: 'bold',
                     fontSize: 13,
-                }
+                },
+                headerShown: false,
             }}
             
         >

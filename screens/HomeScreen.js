@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet, Image} from 'react-native';
 const HomeScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Text>Home Screen aha~</Text>
+            <Text>Schedule Page</Text>
             <Button
                 title="Click Here"
                 onPress={() => alert('bro clicked the button')}
