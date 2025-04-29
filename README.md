@@ -41,3 +41,8 @@ A Mobile recreation of an HTML project from my sophmore year.
 3. Start the Server
 
         npx expo start
+
+
+4. Scan your QR Code
+
+5. Celebrate
