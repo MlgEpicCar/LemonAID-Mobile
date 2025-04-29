@@ -1,4 +1,4 @@
-# LemonAID Mobile
+# ![LemonAID](assets/images/LemonAID_White.png)
 
 A Mobile recreation of an HTML project from my sophmore year. 
 
