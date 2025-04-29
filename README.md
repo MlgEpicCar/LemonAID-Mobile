@@ -4,7 +4,7 @@ A Mobile recreation of an HTML project from my sophmore year.
 
 ## Dependencies
 
-- | Package | Version |
+| Package | Version |
 |--------|---------|
 | [`@react-navigation/bottom-tabs`](https://www.npmjs.com/package/@react-navigation/bottom-tabs) | ^7.3.10 |
 | [`@react-navigation/native`](https://www.npmjs.com/package/@react-navigation/native) | ^7.1.6 |
