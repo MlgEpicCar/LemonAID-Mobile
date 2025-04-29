@@ -29,15 +29,15 @@ A Mobile recreation of an HTML project from my sophmore year.
 
 1. Install Expo CLI (if not already installed)
 
-npm install -g expo-cli
+        npm install -g expo-cli
 
 
 2. Install Project Dependencies
 
-cd LemonAID-Mobile
-npm install
+       cd LemonAID-Mobile
+       npm install
 
 
 3. Start the Server
 
-npx expo start
+        npx expo start
