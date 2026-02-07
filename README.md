@@ -1,3 +1,5 @@
+Super Totally Broken, IDK how to make Expo Go work because of version incompatibilty or smth, Expo Go is v54 and my code is v52
+
 # ![LemonAID](assets/images/LemonAID_White.png)
 
 A Mobile recreation of an HTML project from my sophmore year. 
